@@ -1,6 +1,6 @@
 {
   "name": "cookie-client",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Geraint Luff",
   "description": "Basic cookie-handling for outgoing requests",
   "dependencies": {
@@ -16,6 +16,10 @@
       "web": "https://github.com/geraintluff/"
     }
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/geraintluff/cookie-client.git"
+  },
   "main": "cookie-client.js",
   "license:": [
     {
