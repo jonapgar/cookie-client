@@ -1,0 +1,30 @@
+{
+  "name": "cookie-client",
+  "version": "0.0.1",
+  "author": "Geraint Luff",
+  "description": "Basic cookie-handling for outgoing requests",
+  "dependencies": {
+  },
+  "keywords": [
+    "cookie",
+    "client"
+  ],
+  "maintainers": [
+    {
+      "name": "Geraint Luff",
+      "email": "luffgd@gmail.com",
+      "web": "https://github.com/geraintluff/"
+    }
+  ],
+  "main": "cookie-client.js",
+  "license:": [
+    {
+      "type": "Public Domain",
+      "url": "http://geraintluff.github.io/tv4/LICENSE.txt"
+    },
+    {
+      "type": "MIT",
+      "url": "http://jsonary.com/LICENSE.txt"
+    }
+  ]
+}
