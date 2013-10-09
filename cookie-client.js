@@ -1,6 +1,7 @@
 var fs = require('fs');
 var http = require('http');
 var path = require('path');
+var domain = require('domain');
 
 var CookieClient = module.exports = function CookieClient () {
 	if (!(this instanceof CookieClient)) {
@@ -185,6 +186,10 @@ fs.exists(pslFilename, function (exists) {
 		readPSLFile();
 		return;
 	}
+
+	console.log("cookie-client ERROR: no public suffix list found (cookies may be unsafe)");
+
+	/*
 	console.log("cookie-client: Fetching public suffix list");
 	http.get('http://mxr.mozilla.org/mozilla-central/source/netwerk/dns/effective_tld_names.dat?raw=1', function (response) {
 		if (response.statusCode !== 200) {
@@ -210,6 +215,7 @@ fs.exists(pslFilename, function (exists) {
 			readPSLFile();
 		});
 	}
+	*/
 	
 	function readPSLFile() {
 		fs.readFile(pslFilename, function (error, data) {

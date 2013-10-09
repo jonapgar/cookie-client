@@ -50,3 +50,9 @@ cookieClient,whenPslLoaded(function (error) {
 	...
 });
 ```
+
+## License
+
+The code is licensed as [Public Domain](http://geraintluff.github.io/tv4/LICENSE.txt) or [MIT](http://jsonary.com/LICENSE.txt) (your choice).
+
+However, the file `public-suffix-list.txt` is taken from [publicsuffix.org](http://publicsuffix.org/), and has separate licensing terms (Mozilla Public License).  This package *used* to fetch the file from the web on first run, but that caused Node to crash if the connection was dropped by the remote server.  It is therefore included in the package, but is license separately from the rest of the code.
