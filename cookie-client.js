@@ -73,6 +73,7 @@ CookieClient.prototype = {
 };
 
 var Cookie = function Cookie(str, defaults) {
+	defaults = defaults || {}
 	var pairs = [];
 	var parts = str.split(/ *; */);
 	for (var i = 0; i < parts.length; i++) {
@@ -105,8 +106,10 @@ var Cookie = function Cookie(str, defaults) {
 		}
 	}
 	this.expires = this.expires || Infinity;
-	this.path = this.path.trim() || defaults.path;
-	this.domain = this.domain || defaults.domain;
+	this.path = (this.path || '').trim()
+	this.path = this.path || defaults.path || '/';
+	this.domain = (this.domain || '').trim()
+	this.domain = this.domain || defaults.domain || '';
 	this.secure = this.secure || false;
 	this.httpOnly = this.httpOnly || false;
 };
